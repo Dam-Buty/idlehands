@@ -17,14 +17,14 @@ Pact is a very simple way to keep DOM elements in sync with variables from your 
 And this kind of javascript :
 
 ````
-name: "Yvan";
-hp: 30;
+name = "Yvan";
+hp = 30;
 ````
 You can just make a Pact between your hero's characteristics and the corresponding DIVs :
 
 ````
-name: Pact("Yvan", document.getElementById("name"));
-hp: Pact(30, document.getElementById("hp"));
+name = Pact("Yvan", document.getElementById("name"));
+hp = Pact(30, document.getElementById("hp"));
 ````
 Now, Pacted variables can be read and compared just like regular variables
 
