@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+<pre id="console" style="height: 200px;">
+
+</pre>
+
+
+<script src="Riddim.js"></script>
+<script type="text/javascript">
+var riddim = Riddim(); // Default is 10 ticks per second
+riddim.start();
+
+var total = 0;
+
+riddim.plan(function() {
+  document.getElementById("console").innerHTML += "\n" + total + " - This is a one off operation";
+}).in(5);
+
+riddim.plan(function() {
+  document.getElementById("console").innerHTML += "\n" + total + " - This one executes at each tick";
+  total++;
+
+  if (total > 15) {
+    return false;
+  }
+}).every(1);
+
+riddim.plan(function() {
+  document.getElementById("console").innerHTML += "\n" + total + " - This one executes once every 10 ticks";
+
+  if (total > 15) {
+    document.getElementById("console").innerHTML += "\n" + total + " - Even if the other one has stopped.";
+    total++;
+  }
+
+  if (total > 18) {
+    document.getElementById("console").innerHTML += "\n" + total + " - But eventually it stops.";
+    return false;
+  }
+
+}).every(10);
+</script>
+
+</body>
+</html>
