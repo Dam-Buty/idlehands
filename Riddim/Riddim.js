@@ -46,13 +46,13 @@ var Riddim = function(fps) {
               if (fn() !== false) {
                 self.plan(fn).every(ticks);
               }
-            }
+            };
             if (self.q[ticks - 1] === undefined) {
               self.q[ticks - 1] = [];
             }
             self.q[ticks - 1].push(fn2);
           }
-      }
+      };
     }
   };
 };
