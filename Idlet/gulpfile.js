@@ -12,17 +12,17 @@ dst = "./";
 
 // JS hint
 gulp.task('jshint', function() {
-  gulp.src(src + "js/*.js")
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+  gulp.src(src + "*.js")
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'));
 });
 
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
-    gulp.src(src + "idlet.dev.js")
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(dst + "idlet.js"));
+  gulp.src(src + "idlet.dev.js")
+  // .pipe(stripDebug())
+  .pipe(uglify())
+  .pipe(gulp.dest(dst + "idlet.js"));
 });
 
 // default gulp task

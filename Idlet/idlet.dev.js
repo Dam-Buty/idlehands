@@ -1,17 +1,15 @@
 (function(window) {
+  var _setInterval = window.setInterval;
+  var _setTimeout = window.setTimeout;
+  var ratio = 40;
 
   window.setInterval = function(callback, time) {
-    var ratio = window.prompt("Ratio");
-
-    window.setInterval(callback, time / ratio);
+    console.log("Original time : " + time);
+    _setInterval(callback, time / ratio);
   };
-
 
   window.setTimeout = function(callback, time) {
-    var ratio = window.prompt("Ratio");
-
-    window.setTimeout(callback, time / ratio);
+    console.log("Original time : " + time);
+    _setTimeout(callback, time / ratio);
   };
-
-
 })(window);

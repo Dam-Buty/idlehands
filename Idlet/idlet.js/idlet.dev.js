@@ -1,1 +1,1 @@
-!function(t){t.setInterval=function(o,n){var e=t.prompt("Ratio");t.setInterval(o,n/e)},t.setTimeout=function(o,n){var e=t.prompt("Ratio");t.setTimeout(o,n/e)}}(window);
+!function(n){var t=n.setInterval,e=n.setTimeout,i=40;n.setInterval=function(n,e){console.log("Original time : "+e),t(n,e/i)},n.setTimeout=function(n,t){console.log("Original time : "+t),e(n,t/i)}}(window);
