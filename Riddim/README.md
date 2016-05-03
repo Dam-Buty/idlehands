@@ -8,7 +8,7 @@ Riddim is a very simple javascript wrapper for the setTimeout and setInterval fu
 Just import the Riddim.min.js file,
 
 ````
-<script src="Riddim.js"></script>
+<script src="Riddim.min.js"></script>
 ````
 
 initialize and start Riddim :
@@ -36,7 +36,7 @@ riddim.plan(sayHello).every(5);
 // sayHello will execute every 5 ticks or twice per second
 ````
 
-# how to stop an interval
+# How to stop an interval
 
 Each iteration can return false to stop the Interval.
 
